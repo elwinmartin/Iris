@@ -154,8 +154,9 @@ public class ProgramUniforms {
 			}
 
 			locations.put(id, name);
-			uniformNames.put(name, type);
-
+			if (!uniformNames.containsKey(name) {
+			    uniformNames.put(name, type);
+			}
 			return OptionalInt.of(id);
 		}
 
@@ -249,7 +250,9 @@ public class ProgramUniforms {
 
 		@Override
 		public UniformHolder externallyManagedUniform(String name, UniformType type) {
-			externalUniformNames.put(name, type);
+			if (!externalUniformNames.containsKey(name) {
+			    externalUniformNames.put(name, type);
+			}
 			return this;
 		}
 	}
